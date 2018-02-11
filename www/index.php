@@ -295,6 +295,7 @@
             <input id="timelapse_button" type="button" class="btn btn-primary" <?php getdisplayStyle('actions', $userLevel); ?>>
             <input id="md_button" type="button" class="btn btn-primary" <?php getdisplayStyle('settings', $userLevel); ?>>
             <input id="halt_button" type="button" class="btn btn-danger" <?php getdisplayStyle('settings', $userLevel); ?>>
+            <input id="light_button" type="button" class="btn btn-danger" <?php getdisplayStyle('settings', $userLevel); ?>>
          </div>
       </div>
       <div id="secondary-buttons" class="container-fluid text-center">
