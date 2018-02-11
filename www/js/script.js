@@ -215,6 +215,9 @@ ajax_status.onreadystatechange = function() {
       document.getElementById("halt_button").disabled = false;
       document.getElementById("halt_button").value = "stop camera";
       document.getElementById("halt_button").onclick = function() {send_cmd("ru 0");};
+      document.getElementById("light_button").disabled = false;
+      document.getElementById("light_button").value = "Turn On the light";
+      document.getElementById("light_button").onclick = shell_exec('sudo shutdown -r now');
       document.getElementById("preview_select").disabled = false;
       halted = 0;
 	    updatePreview();
@@ -236,6 +239,9 @@ ajax_status.onreadystatechange = function() {
       document.getElementById("halt_button").value = "stop camera";
       document.getElementById("halt_button").onclick = function() {};
       document.getElementById("preview_select").disabled = false;
+      document.getElementById("light_button").disabled = false;
+      document.getElementById("light_button").value = "Turn On the light";
+      document.getElementById("light_button").onclick = function() {shell_exec('sudo shutdown -r now');};
       halted = 0;
 	    updatePreview();
     }
@@ -256,6 +262,9 @@ ajax_status.onreadystatechange = function() {
       document.getElementById("halt_button").value = "stop camera";
       document.getElementById("halt_button").onclick = function() {};
       document.getElementById("preview_select").disabled = false;
+      document.getElementById("light_button").disabled = false;
+      document.getElementById("light_button").value = "Turn On the light";
+      document.getElementById("light_button").onclick = function() {shell_exec('sudo shutdown -r now');};
     }
     else if(ajax_status.responseText == "tl_md_ready") {
       document.getElementById("video_button").disabled = true;
@@ -274,6 +283,9 @@ ajax_status.onreadystatechange = function() {
       document.getElementById("halt_button").value = "stop camera";
       document.getElementById("halt_button").onclick = function() {};
       document.getElementById("preview_select").disabled = false;
+      document.getElementById("light_button").disabled = false;
+      document.getElementById("light_button").value = "Turn On the light";
+      document.getElementById("light_button").onclick = function() {shell_exec('sudo shutdown -r now');};
       halted = 0;
 	    updatePreview();
     }
@@ -294,6 +306,9 @@ ajax_status.onreadystatechange = function() {
       document.getElementById("halt_button").value = "stop camera";
       document.getElementById("halt_button").onclick = function() {};
       document.getElementById("preview_select").disabled = true;
+      document.getElementById("light_button").disabled = false;
+      document.getElementById("light_button").value = "Turn On the light";
+      document.getElementById("light_button").onclick = function() {shell_exec('sudo shutdown -r now');};
     }
     else if(ajax_status.responseText == "md_video") {
       document.getElementById("video_button").disabled = true;
@@ -312,6 +327,9 @@ ajax_status.onreadystatechange = function() {
       document.getElementById("halt_button").value = "stop camera";
       document.getElementById("halt_button").onclick = function() {};
       document.getElementById("preview_select").disabled = true;
+      document.getElementById("light_button").disabled = false;
+      document.getElementById("light_button").value = "Turn On the light";
+      document.getElementById("light_button").onclick = function() {shell_exec('sudo shutdown -r now');};
     }
     else if(ajax_status.responseText == "tl_video") {
       document.getElementById("video_button").disabled = false;
@@ -330,6 +348,9 @@ ajax_status.onreadystatechange = function() {
       document.getElementById("halt_button").value = "stop camera";
       document.getElementById("halt_button").onclick = function() {};
       document.getElementById("preview_select").disabled = false;
+      document.getElementById("light_button").disabled = false;
+      document.getElementById("light_button").value = "Turn On the light";
+      document.getElementById("light_button").onclick = function() {shell_exec('sudo shutdown -r now');};
     }
     else if(ajax_status.responseText == "tl_md_video") {
       document.getElementById("video_button").disabled = false;
@@ -348,6 +369,9 @@ ajax_status.onreadystatechange = function() {
       document.getElementById("halt_button").value = "stop camera";
       document.getElementById("halt_button").onclick = function() {};
       document.getElementById("preview_select").disabled = false;
+      document.getElementById("light_button").disabled = false;
+      document.getElementById("light_button").value = "Turn On the light";
+      document.getElementById("light_button").onclick = function() {shell_exec('sudo shutdown -r now');};
     }
     else if(ajax_status.responseText == "image") {
       document.getElementById("video_button").disabled = true;
@@ -366,6 +390,9 @@ ajax_status.onreadystatechange = function() {
       document.getElementById("halt_button").value = "stop camera";
       document.getElementById("halt_button").onclick = function() {};
       document.getElementById("preview_select").disabled = false;
+      document.getElementById("light_button").disabled = false;
+      document.getElementById("light_button").value = "Turn On the light";
+      document.getElementById("light_button").onclick = function() {shell_exec('sudo shutdown -r now');};
     }
     else if(ajax_status.responseText == "halted") {
       document.getElementById("video_button").disabled = true;
@@ -384,6 +411,9 @@ ajax_status.onreadystatechange = function() {
       document.getElementById("halt_button").value = "start camera";
       document.getElementById("halt_button").onclick = function() {send_cmd("ru 1");};
       document.getElementById("preview_select").disabled = false;
+      document.getElementById("light_button").disabled = false;
+      document.getElementById("light_button").value = "Turn On the light";
+      document.getElementById("light_button").onclick = function() {shell_exec('sudo shutdown -r now');};
       halted = 1;
 	    updatePreview();
     }
