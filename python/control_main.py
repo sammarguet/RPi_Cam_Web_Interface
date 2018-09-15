@@ -40,7 +40,7 @@ GPIO.output(PIN_LIGHT, GPIO.HIGH)
 
 
 while 1 :
-	print('i = %d \n' % i)
+	#print('i = %d \n' % i)
 	pin_b0		= GPIO.input(PIN_BUTTON_0)
         pin_b1		= GPIO.input(PIN_BUTTON_1)
         pin_open	= GPIO.input(PIN_CLOSED)
