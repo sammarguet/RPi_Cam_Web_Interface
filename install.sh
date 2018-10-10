@@ -374,6 +374,12 @@ fi
 
 sudo chmod 666 /var/www$rpicamdir/FIFO1
 
+if [ ! -e /var/www$rpicamdir/FIFO_doorlight ]; then
+   sudo mknod /var/www$rpicamdir/FIFO_doorlight p
+fi
+
+sudo chmod 666 /var/www$rpicamdir/FIFO_doorlight
+
 if [ ! -d /dev/shm/mjpeg ]; then
    mkdir /dev/shm/mjpeg
 fi
