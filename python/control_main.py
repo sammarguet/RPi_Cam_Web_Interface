@@ -1,3 +1,5 @@
+import datetime
+
 import RPi.GPIO as GPIO
 import time
 
@@ -40,13 +42,16 @@ GPIO.output(PIN_LIGHT, GPIO.HIGH)
 
 
 while 1 :
+	now = datetime.datetime.now()
+	if(now.second == 30) :
+		print now.strftime("%Y-%m-%d %H:%M:%S")
 	#print('i = %d \n' % i)
 	pin_b0		= GPIO.input(PIN_BUTTON_0)
         pin_b1		= GPIO.input(PIN_BUTTON_1)
         pin_open	= GPIO.input(PIN_CLOSED)
         pin_closed	= GPIO.input(PIN_OPEN)
 
-	if pin_b0 != 1:
+	if pin_b0 != 1 or (pin_closed!=1 and now.hour==19 and now.minute==30) :
 		print('Fermeture de porte')
 		while pin_closed and pin_b1 :
 			pin_b1 = GPIO.input(PIN_BUTTON_1)
@@ -58,7 +63,7 @@ while 1 :
 		if pin_closed !=1:
 			print('Porte fermee')
 		time.sleep(1)
-        if pin_b1 != 1:
+        if pin_b1 != 1 or (pin_open!=1 and now.hour==7 and now.minute==30) :
 		print('Ouverture de porte')
                 while pin_open and pin_b0 :
                         pin_b0 = GPIO.input(PIN_BUTTON_0)
