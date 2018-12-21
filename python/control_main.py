@@ -43,9 +43,7 @@ GPIO.output(PIN_LIGHT, GPIO.HIGH)
 
 while 1 :
 	now = datetime.datetime.now()
-	if(now.second == 30) :
-		print now.strftime("%Y-%m-%d %H:%M:%S")
-	#print('i = %d \n' % i)
+
 	pin_b0		= GPIO.input(PIN_BUTTON_0)
         pin_b1		= GPIO.input(PIN_BUTTON_1)
         pin_open	= GPIO.input(PIN_CLOSED)
@@ -78,9 +76,6 @@ while 1 :
 	GPIO.output(PIN_MOTOR_0, GPIO.LOW)
         GPIO.output(PIN_MOTOR_1, GPIO.LOW)
 
-
 	time.sleep(0.1)
-	i+=1
-
  
 GPIO.output(PIN_LIGHT, GPIO.LOW)
