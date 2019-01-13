@@ -35,6 +35,10 @@ GPIO.setup(PIN_BUTTON_1, GPIO.IN)  # set up Pin Button Open
 GPIO.setup(PIN_OPEN, GPIO.IN)  # set up Pin End Of Course Door Opened
 GPIO.setup(PIN_CLOSED, GPIO.IN)  # set up Pin End Of Course Door closed
 
+pin_b0 = GPIO.input(PIN_BUTTON_0)
+pin_open = GPIO.input(PIN_CLOSED)
+
+
 while pin_open and pin_b0 :
 	pin_b0 = GPIO.input(PIN_BUTTON_0)
 	pin_open = GPIO.input(PIN_CLOSED)
